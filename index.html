@@ -277,8 +277,8 @@
           </div>
           <!--Filter-->
           <div id="filterGroup" class="btn-group-vertical" role="group">
-            <button type="button" class="btn btn-default">Filter Group 1<span class="fa fa-hand-peace-o"></span></button>
- 		    <button type="button" class="btn btn-default">Filter Group 2<span class="fa fa-hand-peace-o"></span></button>
+            <button id="twoCards" type="button" class="btn btn-default">Filter Group 1<span class="fa fa-hand-peace-o"></span></button>
+ 		    <button id="fourCards" type="button" class="btn btn-default">Filter Group 2<span class="fa fa-hand-peace-o"></span></button>
             <button type="button" class="btn btn-default">Filter Group 3<span class="fa fa-hand-peace-o"></span></button>
  		    <button type="button" class="btn btn-default">Filter Group 5<span class="fa fa-hand-peace-o"></span></button>
 		  </div>
@@ -336,6 +336,12 @@
 	<!--close right slide nav on click-->
 	$( "#rightNav" ).click(function() {
       $("#rightNav").offcanvas('hide');
+    });
+	$( "#twoCards" ).click(function() {
+      $(".card").addClass("twoCards");
+    });
+	$( "#fourCards" ).click(function() {
+      $(".card").removeClass("twoCards");
     });
 	
 	$( document ).ready(function() {

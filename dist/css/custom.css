@@ -1,5 +1,18 @@
 @charset "UTF-8";
 /* CSS Document */
+
+
+.twoCards {
+	width:402px !important;
+}
+
+
+
+
+
+
+
+
 body {
 	background:#EFEFEF;
 }
