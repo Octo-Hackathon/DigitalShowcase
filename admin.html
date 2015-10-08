@@ -1,0 +1,432 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Olabs Application Showcase</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    
+    <link href="dist/css/jasny-bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+   <link href="dist/css/custom.css" rel="stylesheet">
+    
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+	<div class="overlay"></div>
+<!---------------->
+<!---Navigation--->
+<!---------------->
+
+    <nav class="navbar navbar-default navbar-fixed-top box-shadow--2dp">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Olabs Application Showcase</a>
+          <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#rightNav" data-canvas="body">
+  			  <span class="icon-bar"></span>
+  			  <span class="icon-bar"></span>
+   			  <span class="icon-bar"></span>
+ 		  </button>
+        </div>
+        <div id="navbar" class="navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="#about"><span class="fa fa-users iconSpace"></span>About</a></li>
+            <li><a href="#contact"><span class="fa fa-envelope-o iconSpace"></span>Contact</a></li>
+            <li><a href="#contact"><span class="fa fa-user iconSpace"></span>Log-in</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+    </nav>
+    
+<!--Right Nav-->
+    
+    <nav id="rightNav" class="navmenu navmenu-default navmenu-fixed-right offcanvas" role="navigation">
+    	  <div id="sideSearch" class="input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Go!</button>
+            </span>
+          </div>
+	  <ul>
+        <li><a class="sideNavLink" href="#about"><span class="fa fa-users iconSpace"></span>About</a></li>
+        <li><a class="sideNavLink" href="#contact"><span class="fa fa-envelope-o iconSpace"></span>Contact</a></li>
+        <li><a class="sideNavLink" href="#log-in"><span class="fa fa-sign-in iconSpace"></span>Admin</a></li>
+      </ul>
+      <hr/>
+      <div id="filterGroup" class="btn-group-vertical" style="margin-top:0" role="group">
+            <button type="button" class="btn btn-default">Filter Group 1<span class="fa fa-hand-peace-o"></span></button>
+ 		    <button type="button" class="btn btn-default">Filter Group 2<span class="fa fa-hand-peace-o"></span></button>
+            <button type="button" class="btn btn-default">Filter Group 3<span class="fa fa-hand-peace-o"></span></button>
+ 		    <button type="button" class="btn btn-default">Filter Group 5<span class="fa fa-hand-peace-o"></span></button>
+	  </div>
+      <div class="sociaMediaLinks">
+      	 <div class="octoLink"><img height="30px" src="images/Octo_Logo_Informal.svg"/></div>
+         <div class="fa fa-2x fa-facebook-square socialIcon"></div><div class="fa fa-2x fa-twitter-square socialIcon"></div><div class="fa fa-2x fa-linkedin-square socialIcon"></div>
+      </div>
+	</nav>
+    
+    
+
+<!---------------->
+<!--Main Content-->
+<!---------------->
+
+    <div id="mainContent" class="container">
+
+      <div class="row">
+      
+      	<div id="applicationList" class="col-lg-9 col-md-8 col-sm-12">
+        
+        <!--Card-->
+        	<div class="card addNew"  data-toggle="modal" data-target="#addNewModal">
+            	<div class="fa fa-5x fa-plus"></div>
+                <div>Add New App</div>
+            </div>
+            
+        <!--Card End-->
+        <!--Card-->
+        	<div class="card" id="testCard">
+            	<div><div class="editableCard" data-toggle="modal" data-target="#formModal"><div class="fa fa-pencil editCard"></div><div class="editOverlay"></div></div><img class="cardImage" src="images/inflo.png" data-toggle="modal" data-target="#modalTest"/></div>
+           		<div class="cardContent">
+            		<div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalTest">Inflo</a></div>
+                    <div class="cardSubTitle">Sub Title</div>
+                    <hr/>
+                    <div class="cardCatagory">Healthcare</div> 
+           		</div>
+            	<div class="cardFooter">
+                	<div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><div class="cardFeatured fa fa-star-o"></div>
+                </div>
+            </div>
+        <!--Card End-->
+        <!--Card-->
+        	<div class="card">
+            	<div><img class="cardImage" src="images/inflo.png" data-toggle="modal" data-target="#modalTest"/></div>
+           		<div class="cardContent">
+            		<div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalTest">Inflo</a></div>
+                    <div class="cardSubTitle">Sub Title</div>
+                    <hr/>
+                    <div class="cardCatagory">Healthcare</div> 
+           		</div>
+            	<div class="cardFooter">
+                	<div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><div class="cardFeatured fa fa-star-o"></div>
+                </div>
+            </div>
+        <!--Card End-->
+        <!--Card-->
+        	<div class="card">
+            	<div><img class="cardImage" src="images/inflo.png" data-toggle="modal" data-target="#modalTest"/></div>
+           		<div class="cardContent">
+            		<div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalTest">Inflo</a></div>
+                    <div class="cardSubTitle">Sub Title</div>
+                    <hr/>
+                    <div class="cardCatagory">Healthcare</div> 
+           		</div>
+            	<div class="cardFooter">
+                	<div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><div class="cardFeatured fa fa-star-o"></div>
+                </div>
+            </div>
+        <!--Card End-->
+        <!--Card-->
+        	<div class="card">
+            	<div><img class="cardImage" src="images/inflo.png" data-toggle="modal" data-target="#modalTest"/></div>
+           		<div class="cardContent">
+            		<div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalTest">Inflo</a></div>
+                    <div class="cardSubTitle">Sub Title</div>
+                    <hr/>
+                    <div class="cardCatagory">Healthcare</div> 
+           		</div>
+            	<div class="cardFooter">
+                	<div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><div class="cardFeatured fa fa-star-o"></div>
+                </div>
+            </div>
+        <!--Card End-->
+        <!--Card-->
+        	<div class="card">
+            	<div><img class="cardImage" src="images/inflo.png" data-toggle="modal" data-target="#modalTest"/></div>
+           		<div class="cardContent">
+            		<div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalTest">Inflo</a></div>
+                    <div class="cardSubTitle">Sub Title</div>
+                    <hr/>
+                    <div class="cardCatagory">Healthcare</div> 
+           		</div>
+            	<div class="cardFooter">
+                	<div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><div class="cardFeatured fa fa-star-o"></div>
+                </div>
+            </div>
+        <!--Card End-->
+        <!--Card-->
+        	<div class="card">
+            	<div><img class="cardImage" src="images/inflo.png" data-toggle="modal" data-target="#modalTest"/></div>
+           		<div class="cardContent">
+            		<div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalTest">Inflo</a></div>
+                    <div class="cardSubTitle">Sub Title</div>
+                    <hr/>
+                    <div class="cardCatagory">Healthcare</div> 
+           		</div>
+            	<div class="cardFooter">
+                	<div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><div class="cardFeatured fa fa-star-o"></div>
+                </div>
+            </div>
+        <!--Card End-->
+        <!--Card-->
+        	<div class="card">
+            	<div><img class="cardImage" src="images/inflo.png" data-toggle="modal" data-target="#modalTest"/></div>
+           		<div class="cardContent">
+            		<div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalTest">Inflo</a></div>
+                    <div class="cardSubTitle">Sub Title</div>
+                    <hr/>
+                    <div class="cardCatagory">Healthcare</div> 
+           		</div>
+            	<div class="cardFooter">
+                	<div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><div class="cardFeatured fa fa-star-o"></div>
+                </div>
+            </div>
+        <!--Card End-->
+        <!--Card-->
+        	<div class="card">
+            	<div><img class="cardImage" src="images/inflo.png" data-toggle="modal" data-target="#modalTest"/></div>
+           		<div class="cardContent">
+            		<div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalTest">Inflo</a></div>
+                    <div class="cardSubTitle">Sub Title</div>
+                    <hr/>
+                    <div class="cardCatagory">Healthcare</div> 
+           		</div>
+            	<div class="cardFooter">
+                	<div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><div class="cardFeatured fa fa-star-o"></div>
+                </div>
+            </div>
+        <!--Card End-->
+        <!--Card-->
+        	<div class="card">
+            	<div><img class="cardImage" src="images/inflo.png" data-toggle="modal" data-target="#modalTest"/></div>
+           		<div class="cardContent">
+            		<div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalTest">Inflo</a></div>
+                    <div class="cardSubTitle">Sub Title</div>
+                    <hr/>
+                    <div class="cardCatagory">Healthcare</div> 
+           		</div>
+            	<div class="cardFooter">
+                	<div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><div class="cardFeatured fa fa-star-o"></div>
+                </div>
+            </div>
+        <!--Card End-->
+        <!--Card-->
+        	<div class="card">
+            	<div><img class="cardImage" src="images/inflo.png" data-toggle="modal" data-target="#modalTest"/></div>
+           		<div class="cardContent">
+            		<div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalTest">Inflo</a></div>
+                    <div class="cardSubTitle">Sub Title</div>
+                    <hr/>
+                    <div class="cardCatagory">Healthcare</div> 
+           		</div>
+            	<div class="cardFooter">
+                	<div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><div class="cardFeatured fa fa-star-o"></div>
+                </div>
+            </div>
+        <!--Card End-->
+        <!--Card-->
+        	<div class="card">
+            	<div><img class="cardImage" src="images/inflo.png" data-toggle="modal" data-target="#modalTest"/></div>
+           		<div class="cardContent">
+            		<div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalTest">Inflo</a></div>
+                    <div class="cardSubTitle">Sub Title</div>
+                    <hr/>
+                    <div class="cardCatagory">Healthcare</div> 
+           		</div>
+            	<div class="cardFooter">
+                	<div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><div class="cardFeatured fa fa-star-o"></div>
+                </div>
+            </div>
+        <!--Card End-->
+		<div class="footer">&copy; Octo Consulting 2015</div>
+        </div>
+        
+        <!--Fixed Right Menu-->
+        
+        <div id=	"sideBar" class="col-lg-3 col-md-4 hidden-sm hidden-xs">
+          <div class="affix">
+          <!--Search-->
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Go!</button>
+            </span>
+          </div>
+          <!--Filter-->
+          <div id="filterGroup" class="btn-group-vertical" role="group">
+            <button id="twoCards" type="button" class="btn btn-default">Filter Group 1<span class="fa fa-hand-peace-o"></span></button>
+ 		    <button id="fourCards" type="button" class="btn btn-default">Filter Group 2<span class="fa fa-hand-peace-o"></span></button>
+            <button type="button" class="btn btn-default">Filter Group 3<span class="fa fa-hand-peace-o"></span></button>
+ 		    <button type="button" class="btn btn-default">Filter Group 5<span class="fa fa-hand-peace-o"></span></button>
+		  </div>
+          <div class="sociaMediaLinks">
+      		<div class="octoLink"><img height="30px" src="images/Octo_Logo_Informal.svg"/></div>
+            <div class="fa fa-2x fa-facebook-square socialIcon"></div><div class="fa fa-2x fa-twitter-square socialIcon"></div><div class="fa fa-2x fa-linkedin-square socialIcon"></div>
+     	  </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+
+	<!--Modal-->
+    <div id="modalTest" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalTest">
+	  <div class="modal-dialog modal-lg">
+ 	  <div class="modal-content">
+      <div class="row modalRow">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <div id="modalLeft" class="col-md-6">
+            <div class="modalTitle">Inflo</div>
+            <div class="modalQuestion">The Problem:</div>
+            <div class="modalText">This is the problem statement. Is sums up the problem that was solved by creating this app.</div>
+            <div class="modalQuestion">The Solution:</div>
+            <div class="modalText">This is the problem statement. Is sums up the problem that was solved by creating this app.</div>
+            <div class="modalQuestion">The Benefits:</div>
+            <div class="modalText">This is the problem statement. Is sums up the problem that was solved by creating this app.</div>
+          </div>
+          <div id="modalRight" class="col-md-6">
+            <div class="appShowcaseImg"><img src="images/placeHolder.png"/></div>
+            <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="HTML5"><img src="images/HTML5_Badge.png"/></div><div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="CSS3"><img src="images/css3-Badge.png"/></div><div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="Angular"><img src="images/angularjs-logo.png"/></div>
+            <button class="modalButton" type="submit">VISIT SITE</button>
+          </div>
+  	  </div>
+      </div>
+ 	 </div>
+	</div>
+    
+    <!--Form Modal-->
+    <div id="formModal" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog modal-lg">
+ 	  <div class="modal-content formModalContent">
+      <div class="row modalRow">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <form>
+	  <div class="form-group">
+   	 <label for="exampleInputEmail1">Title</label>
+  	  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Title" value="Inflo">
+  	</div>
+ 	 <div class="form-group">
+	    <label for="exampleInputPassword1">Subtitle</label>
+    	<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Subtitle" value="Sub Title">
+  	</div>
+    <div class="form-group">
+	    <label for="exampleInputPassword1">Category</label>
+    	<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Category" value="Health">
+  	</div>
+  	<div class="form-group">
+    	<label for="exampleInputFile">Thumbnail Image</label>
+    	<input type="file" id="exampleInputFile">
+    	<p class="help-block">ExampleThumbnail.png</p>
+  	</div>
+  	<div class="checkbox">
+    	<label>
+      	<input type="checkbox"> Featured
+    	</label>
+  	</div>
+  	<button type="submit" class="btn btn-default">Update Application</button>
+	</form>
+  	  </div>
+      </div>
+ 	 </div>
+	</div>
+    
+    <!--Form Modal Add New-->
+    <div id="addNewModal" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog modal-lg">
+ 	  <div class="modal-content formModalContent">
+      <div class="row modalRow">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <form>
+	  <div class="form-group">
+   	 <label for="exampleInputEmail1">Title</label>
+  	  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Title">
+  	</div>
+ 	 <div class="form-group">
+	    <label for="exampleInputPassword1">Subtitle</label>
+    	<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Subtitle">
+  	</div>
+    <div class="form-group">
+	    <label for="exampleInputPassword1">Category</label>
+    	<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Category">
+  	</div>
+  	<div class="form-group">
+    	<label for="exampleInputFile">Thumbnail Image</label>
+    	<input type="file" id="exampleInputFile">
+    	<p class="help-block">ExampleThumbnail.png</p>
+  	</div>
+  	<div class="checkbox">
+    	<label>
+      	<input type="checkbox"> Featured
+    	</label>
+  	</div>
+  	<button type="submit" class="btn btn-default">Add Application</button>
+	</form>
+  	  </div>
+      </div>
+ 	 </div>
+	</div>
+    
+    
+    
+    
+
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
+    
+    <script src="dist/js/jasny-bootstrap.js"></script>
+    
+    
+    <script>
+	<!--close right slide nav on click-->
+	$( "#rightNav" ).click(function() {
+      $("#rightNav").offcanvas('hide');
+    });
+	$( "#twoCards" ).click(function() {
+      $(".card").addClass("twoCards");
+    });
+	$( "#fourCards" ).click(function() {
+      $(".card").removeClass("twoCards");
+    });
+	
+	
+	$("#testCard").mouseover(function() {
+	  $(".editableCard").css("display", "block");
+	});
+	$("#testCard").mouseout(function() {
+	  $(".editableCard").css("display", "none");
+	});
+	
+	
+	
+	$( document ).ready(function() {
+      $('[data-toggle="tooltip"]').tooltip()
+	});
+	
+	</script>
+  </body>
+</html>
