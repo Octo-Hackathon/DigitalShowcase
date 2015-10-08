@@ -2,7 +2,7 @@
   "name": "api",
   "version": "1.0.0",
   "description": "This project contains api services developed using AWS Lambda",
-  "main": "index.js",
+  "main": "app_list.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
