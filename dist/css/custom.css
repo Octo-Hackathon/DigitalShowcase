@@ -1,0 +1,343 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Bootstrap CSS Elements */
+body {
+	background:#FFF;
+}
+
+/* remove all radii */
+* {
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+hr {
+	margin:5px;
+}
+.btn	{
+	text-align:left;
+	outline:none !important;
+	border-radius:0;
+}
+.btn span {
+	float:right;
+}
+.input-group {
+	width:100%;
+}
+
+/* navigation */
+.navbar-brand > img {
+	height: 50px;
+	margin-top:-18px;
+}
+.navbar-nav li a {
+	height: 80px;
+	line-height:45px;
+}
+.navbar-default .navbar-nav li a {
+	color:white;
+	outline:none;
+}
+.navbar-default .navbar-nav li a:hover {
+	color:#569dd3;
+}
+
+
+.navbar-nav li a .fa {
+	height: 80px;
+	line-height:50px;
+}
+.navbar-header {
+	padding: 15px 0 15px 0;
+	width:100%;
+}
+.navbar-default {
+	background: #4e4949;
+	border:#464646;
+}
+
+/* modal */
+.modal-content {
+	border-radius:0;
+}
+
+
+
+/* Custom Classes */
+.capabilityIcons {
+	width:30px;
+	margin:10px 10px 10px 0;
+	display:inline-block;
+}
+.sociaMediaLinks {
+	margin-top: 20px;
+}
+.socialIcon {
+	color:#F68920;
+	margin-right: 10px;
+}
+.octoLink {
+	float: left;
+	margin-right:10px;
+}
+
+
+/* Modal CSS */
+.modalLeft {
+	padding-left: 35px;
+}
+.modalRight {
+	float: right;
+	text-align:right;
+}
+.modalRow {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.appShowcaseImg {
+	width:100%;
+	height:100%;
+}
+.appShowcaseImg img {
+	width:100%;
+	padding-right: 20px;
+}
+.modalTitle {
+	font-size: 20px;
+	color:#F68920;
+}
+.modalHeading {
+	font-weight:bold;
+	margin-top:20px;
+}
+.modalTechIcon {
+	height: 30px;
+	margin:10px;
+	margin-bottom:50px;
+	float:left;
+}
+.modalTechIcon img {
+	width:30px;
+}
+.modalButton {
+	position:absolute;
+	bottom:0;
+	right:40px;
+	color:#F68920;
+	padding:0;
+	background:white;
+	border:none;
+	outline:none;
+}
+.modalButton:hover, .modalButton:active, modalButton:focus {
+	color:#569dd3;
+	background:white;
+	border:none;
+}
+button.close {
+	position:absolute;
+	top:10px;
+	right:20px;
+	z-index:5;
+	outline:none;
+}
+
+/* Navigation */
+.searchBox {
+	padding-right: 30px;
+	width:100%;
+}
+.affix {
+	width:255px;
+}
+.navbar {
+	font-size:18px;
+}
+#navbar {
+	display:none;
+	font-size:18px;
+}
+.navbar-toggle {
+	display:block;
+	position: absolute;
+	right:20px;
+	border:none;
+}
+.icon-bar {
+	background-color: #fff;
+}
+.navbar-toggle:hover .icon-bar {
+    background-color: #333;
+}
+.menuBtn {
+	padding: 15px 15px;
+	line-height:24px;
+}
+.menuBtn:hover {
+	background:none;
+	border-color:#569dd3;
+}
+.menuBtn:focus {
+	background: none;
+	border-color:#569dd3;
+	color:#569DD3;
+}
+.menuBtn:focus span{
+	color:#569DD3;
+}
+.menuBtn span {
+	font-size:24px;
+}
+.menuBtn:hover span {
+	color:#569dd3;
+}
+
+
+.container {
+	width: 100%;
+	margin-left:auto;
+	margin-right:auto;
+}
+#mainContent {
+	margin-top: 120px;
+}
+.footer {
+	text-align: center;
+	color:rgba(139,139,139,1.00);
+	margin-bottom:10px;
+	clear:both;
+}
+
+
+/* Mobile Navigation */
+.filterGroup {
+	width:100%;
+	margin-top:20px;
+}
+#mobileSearchIcon {
+	top:14px;
+}
+#mobileNav {
+	padding: 10px;
+}
+#mobileNav ul {
+	padding: 0;
+	padding-top:20px;
+}
+#mobileNav li {
+	height: 30px;
+	width:100%;
+}
+.sideNavLink {
+	height: 20px;
+	font-size:18px;
+	color:#777;
+}
+#sideSearch	{
+	width:100%;
+	padding-top:14px;
+}
+.iconSpace {
+	width:40px;
+	text-align:center;
+}
+.sideNavLink:hover {
+	text-decoration:none;
+	color:#000;
+}
+
+/* Card CSS */
+.card {
+	width: 100%;
+	margin:0 0px 20px 0px;
+	background:#fff;
+	float:left;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+}
+.cardImage {
+	width:100%;
+	height: 100%;
+}
+.cardContent {
+	padding: 5px;
+}
+.cardTitle {
+	font-size: 16px;
+	color:#F68920;
+}
+.cardTitle a{
+	font-size: 16px;
+	color:#F68920;
+	text-decoration:none;
+	outline:none;
+}
+.cardSubTitle {
+	font-size: 14;
+}
+.cardCatagory {
+	font-size: 10;
+	color:rgba(211,211,211,1.00);
+	font-weight:200;
+}
+.cardFooter {
+	border-top:solid 1px rgba(176,176,176,1.00);
+	padding:5px;
+}
+.cardEye {
+	margin-left: 10px;
+}
+.cardFeatured {
+	float: right;
+	padding:8px;
+	margin:-5px;
+	border-left:solid 1px rgba(203,203,203,1.00);
+}
+
+
+/* Shadows */
+.box-shadow--2dp {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+}
+.box-shadow--3dp {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12)
+}
+
+
+/* Media Queries */
+@media (min-width: 890px) {
+	.card {
+		width:403px;
+		margin:0 10px 20px 10px;
+	}
+	.container {
+		width:876px;
+	}
+	#navbar {
+		display:block;
+		margin-right:70px;
+	}
+	.navbar-header {
+		width:auto;
+	}
+}
+@media (min-width: 992px) {
+	.navbar-toggle {
+		display:block;
+		position: absolute;
+		right:10px;
+		border:none;
+	}
+}
+@media (min-width: 1200px) {
+	#navbar {
+		margin-right: 20px;
+	}
+	.navbar-toggle {
+		display:none;
+	}
+	.container {
+		width:1170px;
+	}
+}
