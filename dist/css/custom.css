@@ -43,6 +43,9 @@ hr {
 .navbar-default .navbar-nav li a:hover {
 	color:#569dd3;
 }
+.navbar-default .navbar-nav li a:focus {
+	color:white;
+}
 
 
 .navbar-nav li a .fa {
@@ -75,7 +78,7 @@ hr {
 	margin-top: 20px;
 }
 .socialIcon {
-	color:#F68920;
+	color:#569dd3;
 	margin-right: 10px;
 }
 .octoLink {
@@ -176,22 +179,21 @@ button.close {
 	line-height:24px;
 }
 .menuBtn:hover {
-	background:none;
-	border-color:#569dd3;
+	background:rgba(247,247,247,1.00);
+	border-color:#CCC;
 }
 .menuBtn:focus {
-	background: none;
-	border-color:#569dd3;
-	color:#569DD3;
+	background: #EFEFEF;
+	border-color:#CCC;
 }
 .menuBtn:focus span{
-	color:#569DD3;
+	color:#333;
 }
 .menuBtn span {
 	font-size:24px;
 }
 .menuBtn:hover span {
-	color:#569dd3;
+	
 }
 
 
