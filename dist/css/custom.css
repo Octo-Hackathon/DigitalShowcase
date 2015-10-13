@@ -43,9 +43,6 @@ hr {
 .navbar-default .navbar-nav li a:hover {
 	color:#569dd3;
 }
-.navbar-default .navbar-nav li a:focus {
-	
-}
 
 
 .navbar-nav li a .fa {
@@ -183,7 +180,7 @@ button.close {
 	border-color:#CCC;
 }
 .menuBtn:focus {
-	background: #EFEFEF;
+	background: #FFF;
 	border-color:#CCC;
 }
 .menuBtn:focus span{
@@ -266,6 +263,7 @@ button.close {
 .cardImage {
 	width:100%;
 	height: 100%;
+	border-bottom:solid 1px rgba(215,215,215,1.00);
 }
 .cardContent {
 	padding: 5px;

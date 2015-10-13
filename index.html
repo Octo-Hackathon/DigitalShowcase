@@ -45,7 +45,7 @@
         <div id="navbar" class="navbar-right">
           <ul class="nav navbar-nav">
             <li><a href="#about"><span class="fa fa-users iconSpace"></span>About</a></li>
-            <li><a href="#" data-toggle="modal" data-target="#modalContact"><span class="fa fa-envelope-o iconSpace"></span>Contact</a></li>
+            <li><a href="#contact" data-toggle="modal" data-target="#modalContact"><span class="fa fa-envelope-o iconSpace"></span>Contact</a></li>
           </ul>
         </div>
     </nav>
@@ -98,7 +98,7 @@
             <div><img class="cardImage" src="images/inflo.png" alt="Inflo Screenshot" data-toggle="modal" data-target="#modalDetails"/></div>
            	<div class="cardContent">
               <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetails">Inflo</a></div>
-              <div class="cardSubTitle">Sub Title</div>
+              <div class="cardSubTitle">How much do you know about where you live?</div>
               <hr>
               <div class="cardCatagory">Healthcare, Census</div>
               <img class="capabilityIcons" src="images/HTML5_Badge.png" data-toggle="tooltip" data-placement="top" title="HTML5"/><img class="capabilityIcons" src="images/css3-Badge.png" data-toggle="tooltip" data-placement="top" title="CSS3"/><img class="capabilityIcons" src="images/angularjs-logo.png" data-toggle="tooltip" data-placement="top" title="AngularJS"/>
@@ -111,10 +111,10 @@
           
           <!--Card-->
           <div class="card">
-            <div><img class="cardImage" src="images/inflo.png" alt="Inflo Screenshot" data-toggle="modal" data-target="#modalDetails"/></div>
+            <div><img class="cardImage" src="images/medcheck-thumb.png" alt="Inflo Screenshot" data-toggle="modal" data-target="#modalDetails"/></div>
            	<div class="cardContent">
-              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetails">Inflo</a></div>
-              <div class="cardSubTitle">Sub Title</div>
+              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetails">medCheck</a></div>
+              <div class="cardSubTitle">Check Once, Choose Once</div>
               <hr>
               <div class="cardCatagory">Healthcare, Census</div>
               <img class="capabilityIcons" src="images/HTML5_Badge.png" data-toggle="tooltip" data-placement="top" title="HTML5"/><img class="capabilityIcons" src="images/css3-Badge.png" data-toggle="tooltip" data-placement="top" title="CSS3"/><img class="capabilityIcons" src="images/angularjs-logo.png" data-toggle="tooltip" data-placement="top" title="AngularJS"/>
@@ -295,6 +295,15 @@
 		}
     });
 	
+	$(".menuBtn").hover(function (){
+        $(this).blur();
+    }, function (){
+        $(this).focus();
+    });
+	
+	$(".navbar-default .navbar-nav li a").click(function (){
+        $(this).blur();
+    });
 	
 	
 	</script>
