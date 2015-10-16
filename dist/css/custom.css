@@ -196,7 +196,10 @@ button.close {
 .menuBtn:hover span {
 	
 }
-
+.menuIcon {
+	height: 24px;
+	float:right;
+}
 
 .container {
 	width: 100%;
