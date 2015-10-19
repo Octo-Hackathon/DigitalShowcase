@@ -187,6 +187,11 @@ button.close {
 	background: rgba(255, 255, 255, 0.61);
 	border-color:#CCC;
 }
+.menuBtn:active {
+	background:rgba(255, 255, 255, 0.30) !important;
+	border-color:#CCC !important;
+	box-shadow:none;
+}
 .menuBtn:focus span{
 	color:#333;
 }
