@@ -197,7 +197,8 @@ button.close {
 	
 }
 .menuIcon {
-	height: 24px;
+	height:24px;
+	width:24px;
 	float:right;
 }
 
