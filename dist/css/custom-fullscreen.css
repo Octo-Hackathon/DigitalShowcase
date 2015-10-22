@@ -394,11 +394,27 @@ button.close {
 	padding:0px;
 }
 .carousel-inner{
-  width:100%;
-  max-height: 600px !important;
+    width:100%;
+    max-height: 600px !important;
 }
 .carousel-caption {
-	top:100px;
+	top:20%;
+	text-align:left;
+	right:auto;
+	bottom:auto;
+}
+.captionRight {
+	text-align: right;
+	right:20%;
+	left:auto;
+}
+.splashText {
+	background-color:rgba(0,0,0,0.51);
+	padding:15px;
+	margin-bottom:10px;
+}
+.splashText h2 {
+	margin:0;
 }
 
 /*Application List*/
