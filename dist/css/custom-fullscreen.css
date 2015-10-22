@@ -133,6 +133,10 @@ hr {
 	color:#569dd3;
 	margin-right: 10px;
 }
+.socialIconTopNav {
+	padding-top: 18px;
+	color:#929292;
+}
 .octoLink {
 	float: left;
 	margin-right:10px;
@@ -267,9 +271,13 @@ button.close {
 }
 .footer {
 	text-align: center;
-	color:rgba(139,139,139,1.00);
-	margin-bottom:10px;
+	color:#FFF;
 	clear:both;
+	padding: 20px;
+	background:#4E4949;
+}
+.footer a {
+	color:#FFF;
 }
 
 
