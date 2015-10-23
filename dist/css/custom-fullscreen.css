@@ -64,7 +64,7 @@ hr {
 
 .filterButton {
 	color:#F68920;
-	background:white;
+	background:none;
 	border:none;
 	outline:none;
 	margin-left:20px !important;
@@ -77,10 +77,23 @@ hr {
 }
 .filterButton:hover, .filterButton:active, filterButton:focus {
 	color:#569dd3;
-	background:white;
+	background:none !important;
+	background-color:none !important;
 	border:none;
+	-webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
 }
-
+.open > .dropdown-toggle.btn-default {
+	background-color: none;
+}
+.btn-group.open .dropdown-toggle {
+	box-shadow:none;
+	background:none !important;
+}
+.btn-default:focus {
+	background: none;
+}
 .dropBtn {
 	padding: 15px 15px;
 	line-height:24px;
