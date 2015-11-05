@@ -6,6 +6,7 @@ body {
 /*background:url(../../images/bg.png) fixed;*/
 background:#EEE;
 background-size:cover;
+font-family: 'Roboto', sans-serif !important;
 }
 
 /* remove all radii */
@@ -39,6 +40,7 @@ hr {
 .navbar-nav li a {
 	height: 22px;
 	line-height:22px;
+	padding-left:0;
 }
 .navbar-default .navbar-nav li a {
 	color:white;
@@ -133,7 +135,7 @@ hr {
 
 /* Custom Classes */
 .capabilityIcons {
-	width:20px;
+	height:20px;
 	margin:10px 10px 5px 0;
 	display:inline-block;
 }
@@ -147,8 +149,13 @@ hr {
 	margin-right: 10px;
 }
 .socialIconTopNav {
-	padding-top: 18px;
 	color:#929292;
+}
+.socialIconTopNav:hover {
+	color:#569dd3;
+}
+.iconLink {
+	padding:15px 0px 15px 0px !important;
 }
 .octoLink {
 	float: left;
@@ -191,22 +198,24 @@ hr {
 	float:left;
 }
 .modalTechIcon img {
-	width:30px;
+	height:30px;
 }
-.modalButton {
+.modalButton, modalButton:visited {
 	position: absolute;
 	bottom:20px;
 	left:20px;
-	color:#F68920;
+	color:#F68920 !important;
 	padding:0;
 	background:white;
 	border:none;
 	outline:none;
+	text-decoration:none !important;
 }
-.modalButton:hover, .modalButton:active, modalButton:focus {
-	color:#569dd3;
-	background:white;
+.modalButton:hover, .modalButton:active, modalButton:focus{
+	color:#569dd3 !important;
+	background:white !important;
 	border:none;
+	text-decoration:none !important;
 }
 button.close {
 	position:absolute;
@@ -432,7 +441,7 @@ button.close {
 
 /*Application List*/
 #applicationList {
-
+	margin-top: 20px;
 }
 
 .affixWrap {
@@ -496,6 +505,9 @@ button.close {
 	}
 	.navbar-toggle {
 		display:none;
+	}
+	#applicationList {
+		margin-top:0;
 	}
 }
 @media (min-width: 992px) {
