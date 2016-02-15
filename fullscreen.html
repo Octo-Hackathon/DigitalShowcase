@@ -18,6 +18,8 @@
     <link href="dist/css/jasny-bootstrap.css" rel="stylesheet">
     <!-- Font Awesome-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Google Font Roboto -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
     <!-- Custom styles for this template -->
     <link href="dist/css/custom-fullscreen.css" rel="stylesheet">
 	
@@ -44,11 +46,11 @@
         </div>
         <div id="navbar" class="navbar-right">
           <ul class="nav navbar-nav">
-            <li><a href="#about"><span class="fa fa-users iconSpace"></span>About</a></li>
+            <li><a href="#about" id="aboutLink"><span class="fa fa-users iconSpace"></span>About</a></li>
             <li><a href="#contact" id="contactLink"><span class="fa fa-envelope-o iconSpace"></span>Contact</a></li>
-                <li class="fa fa-facebook-square socialIcon socialIconTopNav" style="margin-left:10px;"></li>
-                <li class="fa fa-twitter-square socialIcon socialIconTopNav"></li>
-                <li class="fa fa-linkedin-square socialIcon socialIconTopNav"></li>
+                <li style="margin-left:10px;"><a href="https://www.facebook.com/OctoConsulting" target="_blank" class="iconLink"><span class="fa fa-facebook-square socialIcon socialIconTopNav"></span></a></li>
+                <li><a href="https://twitter.com/octoconsulting" target="_blank" class="iconLink"><span class="fa fa-twitter-square socialIcon socialIconTopNav"></span></a></li>
+                <li><a href="https://www.linkedin.com/company/octo-consulting-group" target="_blank" class="iconLink"><span class="fa fa-linkedin-square socialIcon socialIconTopNav"></span></a></li>
           </ul>
         </div>
     </nav>
@@ -56,11 +58,11 @@
 <!--Mobile Nav-->  
     <nav id="mobileNav" class="navmenu navmenu-default navmenu-fixed-right offcanvas" role="navigation">
       <div class="input-group" id="sideSearch">
-        <input type="text" class="form-control searchBox" placeholder="Search For..." />
+        <input id="searchInput" type="text" class="form-control searchBox" placeholder="Search For..." />
     	<i id="mobileSearchIcon" class="glyphicon glyphicon-search form-control-feedback"></i>
       </div>
 	  <ul>
-        <li><a class="sideNavLink" href="#about"><span class="fa fa-users iconSpace"></span>About</a></li>
+        <li><a class="sideNavLink" href="#about"   id="aboutLinkMobile"><span class="fa fa-users iconSpace"></span>About</a></li>
         <li><a class="sideNavLink" href="#contact" id="contactLinkMobile"><span class="fa fa-envelope-o iconSpace"></span>Contact</a></li>
       </ul>
       <hr/>
@@ -105,10 +107,10 @@
                   <img src="images/splash-img.png" alt="...">
                   <div class="carousel-caption">
                   	<div class="splashText">
-                    <h2>OLABS DIGITAL SHOWCASE</h2>
-                    <h4>Sub Heading Text Place Holder</h4>
+                    <h2>DIGITAL SHOWCASE</h2>
+                    <h4>Demonstrating Octo's Digital Capabilities</h4>
                     </div>
-                    <button type="button" class="btn btn-primary" >ACTION BUTTON</button>
+                    <button type="button" class="btn btn-primary actionBtn" >VIEW APPLICATIONS</button>
                   </div>
                 </div>
                 <div class="item">
@@ -116,9 +118,9 @@
                   <div class="carousel-caption">
                   	<div class="splashText">
                     <h2>Inflo</h2>
-                    <h4>Sub Heading Text Place Holder</h4>
+                    <h4>Get to Know your County</h4>
                     </div>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDetails">READ MORE</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDetailsInflo">READ MORE</button>
                   </div>
                 </div>
                 <div class="item">
@@ -126,9 +128,9 @@
                   <div class="carousel-caption captionRight">
                   	<div class="splashText">
                     <h2>MEDCHECK</h2>
-                    <h4>Sub Heading Text Place Holder</h4>
+                    <h4>Know the Side Effects of Medications</h4>
                     </div>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDetails">READ MORE</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDetailsMEDCheck">READ MORE</button>
                   </div>
                 </div>
               </div>
@@ -175,7 +177,7 @@
               </ul>
             </div>
             <div class="searchInput">
-                <input type="search" class="form-control" placeholder="Search" /><span class="inputIcon fa fa-search"></span>
+                <input type="search" class="form-control" placeholder="Search" id="mainSearch"/><span class="inputIcon fa fa-search"></span>
               </div>
             </nav>
             </div>
@@ -187,16 +189,16 @@
           <!--Card-->
           <div class="card">
           	<div class="cardContent">
-              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetails">Inflo</a></div>
-              <div class="cardSubTitle">Location Data</div>
+              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetailsInflo">Inflo</a></div>
+              <div class="cardSubTitle">Get to Know your County</div>
             </div>
-            <div><img class="cardImage" src="images/inflo.png" alt="Inflo Screenshot" data-toggle="modal" data-target="#modalDetails"/></div>
+            <div><img class="cardImage" src="images/inflo.png" alt="Inflo Screenshot" data-toggle="modal" data-target="#modalDetailsInflo"/></div>
            	<div class="cardContent">
-              <div class="cardCatagory">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis nibh porttitor, accumsan purus id, vulputate mauris. Morbi egestas massa et mi placerat iaculis.</div>
-              <img class="capabilityIcons" src="images/HTML5_Badge.png" data-toggle="tooltip" data-placement="top" title="HTML5" alt="HTML5"/><img class="capabilityIcons" src="images/css3-Badge.png" data-toggle="tooltip" data-placement="top" title="CSS3" alt="CSS3"/><img class="capabilityIcons" src="images/angularjs-logo.png" data-toggle="tooltip" data-placement="top" title="AngularJS" alt="AngularJS"/>
+              <div class="cardCatagory">Providing users with a visualization of county statistics as they pertain to environmental, demographic and natural hazard factors.</div>
+              <img class="capabilityIcons" src="images/mongoIcon.png" data-toggle="tooltip" data-placement="top" title="MongoDB" alt="MongoDB"/><img class="capabilityIcons" src="images/expressIcon.png" data-toggle="tooltip" data-placement="top" title="Express" alt="Express"/><img class="capabilityIcons" src="images/angularjs-logo.png" data-toggle="tooltip" data-placement="top" title="AngularJS" alt="AngularJS"/><img class="capabilityIcons" src="images/nodeIcon.png" data-toggle="tooltip" data-placement="top" title="NodeJS" alt="NodeJS"/><img class="capabilityIcons" src="images/rubyIcon.png" data-toggle="tooltip" data-placement="top" title="Ruby on Rails" alt="Ruby on Rails"/><img class="capabilityIcons" src="images/amazonIcon.png" data-toggle="tooltip" data-placement="top" title="Amazon Web Services" alt="Amazon Web Services"/>
            	</div>
             <div class="cardFooter">
-              <div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><button class="cardButton" data-toggle="modal" data-target="#modalDetails">READ MORE</button>
+              <div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><button class="cardButton" data-toggle="modal" data-target="#modalDetailsInflo">READ MORE</button>
             </div>
           </div>
           <!--Card End-->
@@ -205,16 +207,16 @@
           <!--Card-->
           <div class="card">
             <div class="cardContent">
-              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetails">MEDCheck</a></div>
-              <div class="cardSubTitle">Check Once, Choose Once</div>
+              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetailsMEDCheck">MEDCheck</a></div>
+              <div class="cardSubTitle">Know the Side Effects of Medications</div>
             </div>
-            <div><img class="cardImage" src="images/medcheck-thumb.png" alt="Inflo Screenshot" data-toggle="modal" data-target="#modalDetails"/></div>
+            <div><img class="cardImage" src="images/medcheck-thumb.png" alt="Inflo Screenshot" data-toggle="modal" data-target="#modalDetailsMEDCheck"/></div>
            	<div class="cardContent">
-              <div class="cardCatagory">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis nibh porttitor, accumsan purus id, vulputate mauris. Morbi egestas massa et mi placerat iaculis.</div>
-              <img class="capabilityIcons" src="images/HTML5_Badge.png" data-toggle="tooltip" data-placement="top" title="HTML5" alt="HTML5"/><img class="capabilityIcons" src="images/css3-Badge.png" data-toggle="tooltip" data-placement="top" title="CSS3" alt="CSS3"/><img class="capabilityIcons" src="images/angularjs-logo.png" data-toggle="tooltip" data-placement="top" title="AngularJS" alt="AngularJS"/>
+              <div class="cardCatagory">Providing users with an optimal way to view the side effects of the medication(s) they use.</div>
+              <img class="capabilityIcons" src="images/loopbackIcon.png" data-toggle="tooltip" data-placement="top" title="Loopback" alt="Loopback"/><img class="capabilityIcons" src="images/angularjs-logo.png" data-toggle="tooltip" data-placement="top" title="AngularJS" alt="AngularJS"/><img class="capabilityIcons" src="images/nodeIcon.png" data-toggle="tooltip" data-placement="top" title="NodeJS" alt="NodeJS"/><img class="capabilityIcons" src="images/amazonIcon.png" data-toggle="tooltip" data-placement="top" title="Amazon Web Services" alt="Amazon Web Services"/>
            	</div>
             <div class="cardFooter">
-              <div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><button class="cardButton" data-toggle="modal" data-target="#modalDetails">READ MORE</button>
+              <div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><button class="cardButton" data-toggle="modal" data-target="#modalDetailsMEDCheck">READ MORE</button>
             </div>
           </div>
           <!--Card End-->
@@ -223,16 +225,16 @@
           <!--Card-->
           <div class="card">
             <div class="cardContent">
-              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetails">RefusalCheck</a></div>
-              <div class="cardSubTitle">FDA Drug and Product Refusals</div>
+              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetailsRefusalCheck">RefusalCheck</a></div>
+              <div class="cardSubTitle">Rapidly check for food and drug refusals</div>
             </div>
-            <div><img class="cardImage" src="images/refusalCheck-thumb.png" alt="Inflo Screenshot" data-toggle="modal" data-target="#modalDetails"/></div>
+            <div><img class="cardImage" src="images/refusalCheck-thumb.png" alt="Inflo Screenshot" data-toggle="modal" data-target="#modalDetailsRefusalCheck"/></div>
            	<div class="cardContent">
-              <div class="cardCatagory">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis nibh porttitor, accumsan purus id, vulputate mauris. Morbi egestas massa et mi placerat iaculis.</div>
-              <img class="capabilityIcons" src="images/HTML5_Badge.png" data-toggle="tooltip" data-placement="top" title="HTML5" alt="HTML5"/><img class="capabilityIcons" src="images/css3-Badge.png" data-toggle="tooltip" data-placement="top" title="CSS3" alt="CSS3"/><img class="capabilityIcons" src="images/angularjs-logo.png" data-toggle="tooltip" data-placement="top" title="AngularJS" alt="AngularJS"/>
+              <div class="cardCatagory">Providing consumers with quick access to global food and drug refusals.</div>
+              <img class="capabilityIcons" src="images/loopbackIcon.png" data-toggle="tooltip" data-placement="top" title="Loopback" alt="Loopback"/><img class="capabilityIcons" src="images/angularjs-logo.png" data-toggle="tooltip" data-placement="top" title="AngularJS" alt="AngularJS"/><img class="capabilityIcons" src="images/nodeIcon.png" data-toggle="tooltip" data-placement="top" title="NodeJS" alt="NodeJS"/><img class="capabilityIcons" src="images/amazonIcon.png" data-toggle="tooltip" data-placement="top" title="Amazon Web Services" alt="Amazon Web Services"/>
            	</div>
             <div class="cardFooter">
-              <div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><button class="cardButton" data-toggle="modal" data-target="#modalDetails">READ MORE</button>
+              <div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><button class="cardButton" data-toggle="modal" data-target="#modalDetailsRefusalCheck">READ MORE</button>
             </div>
           </div>
           <!--Card End-->
@@ -241,16 +243,34 @@
           <!--Card-->
           <div class="card">
             <div class="cardContent">
-              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetails">Lumify</a></div>
+              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetailsLumify">Lumify</a></div>
+              <div class="cardSubTitle">Data + Perspective</div>
+            </div>
+            <div><img class="cardImage" src="images/Lumify-thumb.png" alt="Screenshot" data-toggle="modal" data-target="#modalDetailsLumify"/></div>
+           	<div class="cardContent">
+              <div class="cardCatagory">Providing users with a platform to visualize big and unstructured data using open sources technologies.</div>
+              <img class="capabilityIcons" src="images/loopbackIcon.png" data-toggle="tooltip" data-placement="top" title="Loopback" alt="Loopback"/><img class="capabilityIcons" src="images/angularjs-logo.png" data-toggle="tooltip" data-placement="top" title="AngularJS" alt="AngularJS"/><img class="capabilityIcons" src="images/nodeIcon.png" data-toggle="tooltip" data-placement="top" title="NodeJS" alt="NodeJS"/><img class="capabilityIcons" src="images/amazonIcon.png" data-toggle="tooltip" data-placement="top" title="Amazon Web Services" alt="Amazon Web Services"/>
+           	</div>
+            <div class="cardFooter">
+              <div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><button class="cardButton" data-toggle="modal" data-target="#modalDetailsLumify">READ MORE</button>
+            </div>
+          </div>
+          <!--Card End-->
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3">
+          <!--Card-->
+          <div class="card">
+            <div class="cardContent">
+              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetailsNewApp">Mashup App</a></div>
               <div class="cardSubTitle">Sub Title</div>
             </div>
-            <div><img class="cardImage" src="images/Lumify-thumb.png" alt="Screenshot" data-toggle="modal" data-target="#modalDetails"/></div>
+            <div><img class="cardImage" src="images/placeholder-thumb.png" alt="Screenshot" data-toggle="modal" data-target="#modalDetailsNewApp"/></div>
            	<div class="cardContent">
-              <div class="cardCatagory">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis nibh porttitor, accumsan purus id, vulputate mauris. Morbi egestas massa et mi placerat iaculis.</div>
-              <img class="capabilityIcons" src="images/HTML5_Badge.png" data-toggle="tooltip" data-placement="top" title="HTML5" alt="HTML5"/><img class="capabilityIcons" src="images/css3-Badge.png" data-toggle="tooltip" data-placement="top" title="CSS3" alt="CSS3"/><img class="capabilityIcons" src="images/angularjs-logo.png" data-toggle="tooltip" data-placement="top" title="AngularJS" alt="AngularJS"/>
+              <div class="cardCatagory">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis nibh porttitor, accumsan purus.</div>
+              <img class="capabilityIcons" src="images/loopbackIcon.png" data-toggle="tooltip" data-placement="top" title="Loopback" alt="Loopback"/><img class="capabilityIcons" src="images/angularjs-logo.png" data-toggle="tooltip" data-placement="top" title="AngularJS" alt="AngularJS"/><img class="capabilityIcons" src="images/nodeIcon.png" data-toggle="tooltip" data-placement="top" title="NodeJS" alt="NodeJS"/><img class="capabilityIcons" src="images/amazonIcon.png" data-toggle="tooltip" data-placement="top" title="Amazon Web Services" alt="Amazon Web Services"/>
            	</div>
             <div class="cardFooter">
-              <div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><button class="cardButton" data-toggle="modal" data-target="#modalDetails">READ MORE</button>
+              <div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><button class="cardButton" data-toggle="modal" data-target="#modalDetailsNewApp">READ MORE</button>
             </div>
           </div>
           <!--Card End-->
@@ -259,72 +279,28 @@
           <!--Card-->
           <div class="card">
             <div class="cardContent">
-              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetails">App Name</a></div>
+              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetailsNewApp">EPA App</a></div>
               <div class="cardSubTitle">Sub Title</div>
             </div>
-            <div><img class="cardImage" src="images/placeholder-thumb.png" alt="Screenshot" data-toggle="modal" data-target="#modalDetails"/></div>
+            <div><img class="cardImage" src="images/placeholder-thumb.png" alt="Screenshot" data-toggle="modal" data-target="#modalDetailsNewApp"/></div>
            	<div class="cardContent">
-              <div class="cardCatagory">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis nibh porttitor, accumsan purus id, vulputate mauris. Morbi egestas massa et mi placerat iaculis.</div>
-              <img class="capabilityIcons" src="images/HTML5_Badge.png" data-toggle="tooltip" data-placement="top" title="HTML5" alt="HTML5"/><img class="capabilityIcons" src="images/css3-Badge.png" data-toggle="tooltip" data-placement="top" title="CSS3" alt="CSS3"/><img class="capabilityIcons" src="images/angularjs-logo.png" data-toggle="tooltip" data-placement="top" title="AngularJS" alt="AngularJS"/>
+              <div class="cardCatagory">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis nibh porttitor, accumsan purus.</div>
+              <img class="capabilityIcons" src="images/loopbackIcon.png" data-toggle="tooltip" data-placement="top" title="Loopback" alt="Loopback"/><img class="capabilityIcons" src="images/angularjs-logo.png" data-toggle="tooltip" data-placement="top" title="AngularJS" alt="AngularJS"/><img class="capabilityIcons" src="images/nodeIcon.png" data-toggle="tooltip" data-placement="top" title="NodeJS" alt="NodeJS"/><img class="capabilityIcons" src="images/amazonIcon.png" data-toggle="tooltip" data-placement="top" title="Amazon Web Services" alt="Amazon Web Services"/>
            	</div>
             <div class="cardFooter">
-              <div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><button class="cardButton" data-toggle="modal" data-target="#modalDetails">READ MORE</button>
+              <div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><button class="cardButton" data-toggle="modal" data-target="#modalDetailsNewApp">READ MORE</button>
             </div>
           </div>
           <!--Card End-->
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3">
           <!--Card-->
-          <div class="card">
-            <div class="cardContent">
-              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetails">App Name</a></div>
-              <div class="cardSubTitle">Sub Title</div>
-            </div>
-            <div><img class="cardImage" src="images/placeholder-thumb.png" alt="Screenshot" data-toggle="modal" data-target="#modalDetails"/></div>
-           	<div class="cardContent">
-              <div class="cardCatagory">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis nibh porttitor, accumsan purus id, vulputate mauris. Morbi egestas massa et mi placerat iaculis.</div>
-              <img class="capabilityIcons" src="images/HTML5_Badge.png" data-toggle="tooltip" data-placement="top" title="HTML5" alt="HTML5"/><img class="capabilityIcons" src="images/css3-Badge.png" data-toggle="tooltip" data-placement="top" title="CSS3" alt="CSS3"/><img class="capabilityIcons" src="images/angularjs-logo.png" data-toggle="tooltip" data-placement="top" title="AngularJS" alt="AngularJS"/>
-           	</div>
-            <div class="cardFooter">
-              <div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><button class="cardButton" data-toggle="modal" data-target="#modalDetails">READ MORE</button>
-            </div>
-          </div>
+          
           <!--Card End-->
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3">
           <!--Card-->
-          <div class="card">
-            <div class="cardContent">
-              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetails">App Name</a></div>
-              <div class="cardSubTitle">Sub Title</div>
-            </div>
-            <div><img class="cardImage" src="images/placeholder-thumb.png" alt="Screenshot" data-toggle="modal" data-target="#modalDetails"/></div>
-           	<div class="cardContent">
-              <div class="cardCatagory">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis nibh porttitor, accumsan purus id, vulputate mauris. Morbi egestas massa et mi placerat iaculis.</div>
-              <img class="capabilityIcons" src="images/HTML5_Badge.png" data-toggle="tooltip" data-placement="top" title="HTML5" alt="HTML5"/><img class="capabilityIcons" src="images/css3-Badge.png" data-toggle="tooltip" data-placement="top" title="CSS3" alt="CSS3"/><img class="capabilityIcons" src="images/angularjs-logo.png" data-toggle="tooltip" data-placement="top" title="AngularJS" alt="AngularJS"/>
-           	</div>
-            <div class="cardFooter">
-              <div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><button class="cardButton" data-toggle="modal" data-target="#modalDetails">READ MORE</button>
-            </div>
-          </div>
-          <!--Card End-->
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
-          <!--Card-->
-          <div class="card">
-            <div class="cardContent">
-              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetails">App Name</a></div>
-              <div class="cardSubTitle">Sub Title</div>
-            </div>
-            <div><img class="cardImage" src="images/placeholder-thumb.png" alt="Screenshot" data-toggle="modal" data-target="#modalDetails"/></div>
-           	<div class="cardContent">
-              <div class="cardCatagory">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis nibh porttitor, accumsan purus id, vulputate mauris. Morbi egestas massa et mi placerat iaculis.</div>
-              <img class="capabilityIcons" src="images/HTML5_Badge.png" data-toggle="tooltip" data-placement="top" title="HTML5" alt="HTML5"/><img class="capabilityIcons" src="images/css3-Badge.png" data-toggle="tooltip" data-placement="top" title="CSS3" alt="CSS3"/><img class="capabilityIcons" src="images/angularjs-logo.png" data-toggle="tooltip" data-placement="top" title="AngularJS" alt="AngularJS"/>
-           	</div>
-            <div class="cardFooter">
-              <div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><button class="cardButton" data-toggle="modal" data-target="#modalDetails">READ MORE</button>
-            </div>
-          </div>
+          
           <!--Card End-->
           </div>
           </div>
@@ -337,8 +313,8 @@
     <!-- /.container -->
 
 
-	<!--Modal Application Details-->
-    <div id="modalDetails" class="modal fade" tabindex="-1" role="dialog">
+	<!--Modal Inflo Application Details-->
+    <div id="modalDetailsInflo" class="modal fade" tabindex="-1" role="dialog">
 	  <div class="modal-dialog modal-lg">
  	    <div class="modal-content">
           <div class="row modalRow">
@@ -346,19 +322,120 @@
             <div class="col-md-6 modalLeft">
               <div class="modalTitle">Inflo</div>
               <div class="modalHeading">The Problem:</div>
-              <div class="modalText">This is the problem statement. Is sums up the problem that was solved by creating this app.</div>
+              <div class="modalText">Users do not have a centralized mechanism to research and view county statistics in order to make informed decisions.</div>
               <div class="modalHeading">The Solution:</div>
-              <div class="modalText">This is the problem statement. Is sums up the problem that was solved by creating this app.</div>
+              <div class="modalText">Users should be able to view, slice and dice a centralized dashboard that aggregates statistical information from multiple county repositories.</div>
               <div class="modalHeading">The Benefits:</div>
-              <div class="modalText">This is the problem statement. Is sums up the problem that was solved by creating this app.</div>
+              <div class="modalText">Users can make informed decisions regarding counties based on a dashboard that aggregates data from multiple environmental, demographic and natural hazard information repositories.</div>
             </div>
             <div class="col-md-6 modalRight">
-              <div class="appShowcaseImg"><img src="images/placeHolder.png" alt="Screenshots of Inflo Application"/></div>
-              <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="HTML5"><img src="images/HTML5_Badge.png" alt="HTML5 Logo"/></div>
-              <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="CSS3"><img src="images/css3-Badge.png" alt="CSS3 Logo"/></div>
-              <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="Angular"><img src="images/angularjs-logo.png" alt="Angular Logo"/></div>
+              <div class="appShowcaseImg"><img src="images/infloDetails.png" alt="Screenshots of Inflo Application"/></div>
+              <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="MongoDB"><img src="images/mongoIcon.png" alt="MongoDB Logo"/></div>
+              <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="ExpressJS"><img src="images/expressIcon.png" alt="ExpressJS Logo"/></div>
+              <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="AngularJS"><img src="images/angularjs-logo.png" alt="Angular Logo"/></div>
+              <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="NodeJS"><img src="images/nodeIcon.png" alt="NodeJS Logo"/></div>
+              <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="Ruby on Rails"><img src="images/rubyIcon.png" alt="Ruby Logo"/></div>
+              <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="Amazon Web Services"><img src="images/amazonIcon.png" alt="Amazon Logo"/></div>
             </div>
-            <button class="modalButton" type="submit">VISIT SITE</button>
+            <a href="http://apps.octoconsulting.com/inflo/#/" target="_blank" class="modalButton" type="submit">VISIT SITE</a>
+  	      </div>
+        </div>
+ 	  </div>
+	</div>
+    
+    <!--Modal MedCheck Application Details-->
+    <div id="modalDetailsMEDCheck" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog modal-lg">
+ 	    <div class="modal-content">
+          <div class="row modalRow">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="col-md-6 modalLeft">
+              <div class="modalTitle">MEDCheck</div>
+              <div class="modalHeading">The Problem:</div>
+              <div class="modalText">Many prescription medications have serious side effects, causing "adverse effects" that are reported to the FDA. The average consumer does not have an easy mechanism to be aware of these issues.</div>
+              <div class="modalHeading">The Solution:</div>
+              <div class="modalText">Consumers should have an easy way to research prescription medications to see the side effects, reported adverse reactions, and any recalls.</div>
+              <div class="modalHeading">The Benefits:</div>
+              <div class="modalText">Consumer should be able to go to a single web site to research safety information of prescription medications and make informed choices on which prescription medication to choose based on history of adverse effects, label warnings, and recalls.</div>
+            </div>
+            <div class="col-md-6 modalRight">
+              <div class="appShowcaseImg"><img src="images/MEDCheckDetails.png" alt="Screenshots of Inflo Application"/></div>
+              <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="Loopback"><img src="images/loopbackIcon.png" alt="Loopback"/></div>
+              <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="AngularJS"><img src="images/angularjs-logo.png" alt="AngularJS"/></div>
+              <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="NodeJS"><img src="images/nodeIcon.png"  alt="NodeJS"/></div>
+			  <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="Amazon Web Services"><img src="images/amazonIcon.png"  alt="Amazon Web Services"/></div>
+            </div>
+            <a href="http://ec2-52-0-126-175.compute-1.amazonaws.com/index.html#/" target="_blank" class="modalButton" type="submit">VISIT SITE</a>
+  	      </div>
+        </div>
+ 	  </div>
+	</div>
+    
+    <!--Modal RefusalCheck Application Details-->
+    <div id="modalDetailsRefusalCheck" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog modal-lg">
+ 	    <div class="modal-content">
+          <div class="row modalRow">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="col-md-6 modalLeft">
+              <div class="modalTitle">RefusalCheck</div>
+              <div class="modalHeading">The Problem:</div>
+              <div class="modalText">Consumers need a centralized mechanism to view statistical information on food and drug refusals.</div>
+              <div class="modalHeading">The Solution:</div>
+              <div class="modalText">Consumers should have a centralized dashboard to be able to view statistical information on food and drug refusals in order to identify food and drug related implications prior to consumption.</div>
+              <div class="modalHeading">The Benefits:</div>
+              <div class="modalText">Consumers will be able to search on manufacturer(s) or product(s) and obtain useful data including number of refusals, percentage of FDA sample analysis, country of origin and refusal date.</div>
+            </div>
+            <div class="col-md-6 modalRight">
+              <div class="appShowcaseImg"><img src="images/RefusalCheckDetails.png" alt="Screenshots of Inflo Application"/></div>
+              <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="Loopback"><img src="images/loopbackIcon.png" alt="Loopback"/></div>
+              <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="AngularJS"><img src="images/angularjs-logo.png" alt="AngularJS"/></div>
+              <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="NodeJS"><img src="images/nodeIcon.png"  alt="NodeJS"/></div>
+			  <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="Amazon Web Services"><img src="images/amazonIcon.png"  alt="Amazon Web Services"/></div>
+            </div>
+            <!--<a href="http://apps.octoconsulting.com/inflo/#/" target="_blank" class="modalButton" type="submit">VISIT SITE</a>-->
+  	      </div>
+        </div>
+ 	  </div>
+	</div>
+    
+    <!--Modal Lumify Application Details-->
+    <div id="modalDetailsLumify" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog modal-lg">
+ 	    <div class="modal-content">
+          <div class="row modalRow">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div class="col-md-6 modalLeft">
+              <div class="modalTitle">Lumify</div>
+              <div class="modalHeading">The Problem:</div>
+              <div class="modalText">Volumes of structured, unstructured, and semi-structured data at scale and at velocity, provide ingestion and dissemination challenges. This complicates efforts to analyze and graph relationships to analyze links.</div>
+              <div class="modalHeading">The Solution:</div>
+              <div class="modalText">Users can analyze relationships and automatically discovers paths between entities, and establishes new links.</div>
+              <div class="modalHeading">The Benefits:</div>
+              <div class="modalText">Users can ingest structured, unstructured, and semi-structured data from any source (including audio, image and video files), and can plot relationships either in a graph format or on a geospatial map.</div>
+            </div>
+            <div class="col-md-6 modalRight">
+              <div class="appShowcaseImg"><img src="images/LumifyDetails.png" alt="Screenshots of Inflo Application"/></div>
+              <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="Loopback"><img src="images/loopbackIcon.png" alt="Loopback"/></div>
+              <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="AngularJS"><img src="images/angularjs-logo.png" alt="AngularJS"/></div>
+              <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="NodeJS"><img src="images/nodeIcon.png"  alt="NodeJS"/></div>
+			  <div class="modalTechIcon" data-toggle="tooltip" data-placement="top" title="Amazon Web Services"><img src="images/amazonIcon.png"  alt="Amazon Web Services"/></div>
+            </div>
+            <!--<a href="http://apps.octoconsulting.com/inflo/#/" target="_blank" class="modalButton" type="submit">VISIT SITE</a>-->
+  	      </div>
+        </div>
+ 	  </div>
+	</div>
+    
+    <!--Modal About -->
+    <div id="modalAbout" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog modal-lg">
+ 	    <div class="modal-content">
+          <div class="row modalRow" style="padding:20px">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div id="modalLeft" class="col-md-12">
+              About Content.
+            </div>
   	      </div>
         </div>
  	  </div>
@@ -371,30 +448,8 @@
           <div class="row modalRow" style="padding:20px">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <div id="modalLeft" class="col-md-12">
-              <form>
-  			    <div class="form-group">
-   				  <label for="name">Name</label>
-                  <input type="text" class="form-control" id="contactName" placeholder="Name">
-                </div>
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" id="contactEmail" placeholder="Email">
-                </div>
-                <div class="form-group">
-                  <label for="phone">Phone #</label>
-                  <input type="number" class="form-control" id="contactPhone" placeholder="Phone #">
-                </div>
-                <div class="form-group">
-                  <label for="industry">Industry</label>
-                  <input type="text" class="form-control" id="contactIndustry" placeholder="Industry">
-                </div>
-                <div class="form-group" style="margin-bottom:40px">
-                  <label for="industry">Comments</label>
-                  <textarea class="form-control" rows="3"></textarea>
-                </div>
-              </form>
+              Contact Content.
             </div>
-            <button class="modalButton" type="submit" style="left:20px;">SUBMIT</button>
   	      </div>
         </div>
  	  </div>
@@ -410,6 +465,12 @@
     
     <!-- Custom JavaScript -->
     <script>
+	<!-- Disable Search -->
+	$( "#mainSearch" ).prop( "disabled", true );
+	$( "#searchInput" ).prop( "disabled", true );
+	
+	
+	
 	<!-- Initialize tooltips -->
 	$( document ).ready(function() {
       $('[data-toggle="tooltip"]').tooltip()
@@ -476,6 +537,34 @@
 		$('#filterNav').removeData('bs.affix').removeClass('affix affix-top affix-bottom')
 		$('#filterNav').affix({ offset: distance})
     });
+	
+	<!--About-->
+	$("#aboutLinkMobile").click(function() {
+		$("#mobileNav").offcanvas('hide');
+		$('#mobileNav').on('hidden.bs.offcanvas', function (e) {
+     		$("#modalAbout").modal("show");
+		});
+	});
+	
+	$("#aboutLink").click(function() {
+		$("#modalAbout").modal("show");
+	});
+	
+	
+	
+	
+	//Slide to anchor//
+	$(".actionBtn").on('click', function(e) {
+
+   // animate
+   $('html, body').animate({
+       scrollTop: $(".affixWrap").offset().top-50
+     }, 1000, function(){
+
+     });
+
+	});
+	
 	
 	
 	</script>
