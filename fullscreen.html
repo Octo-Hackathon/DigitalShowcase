@@ -46,7 +46,7 @@
         </div>
         <div id="navbar" class="navbar-right">
           <ul class="nav navbar-nav">
-            <li><a href="#about"><span class="fa fa-users iconSpace"></span>About</a></li>
+            <li><a href="#about" id="aboutLink"><span class="fa fa-users iconSpace"></span>About</a></li>
             <li><a href="#contact" id="contactLink"><span class="fa fa-envelope-o iconSpace"></span>Contact</a></li>
                 <li style="margin-left:10px;"><a href="https://www.facebook.com/OctoConsulting" target="_blank" class="iconLink"><span class="fa fa-facebook-square socialIcon socialIconTopNav"></span></a></li>
                 <li><a href="https://twitter.com/octoconsulting" target="_blank" class="iconLink"><span class="fa fa-twitter-square socialIcon socialIconTopNav"></span></a></li>
@@ -62,7 +62,7 @@
     	<i id="mobileSearchIcon" class="glyphicon glyphicon-search form-control-feedback"></i>
       </div>
 	  <ul>
-        <li><a class="sideNavLink" href="#about"><span class="fa fa-users iconSpace"></span>About</a></li>
+        <li><a class="sideNavLink" href="#about"   id="aboutLinkMobile"><span class="fa fa-users iconSpace"></span>About</a></li>
         <li><a class="sideNavLink" href="#contact" id="contactLinkMobile"><span class="fa fa-envelope-o iconSpace"></span>Contact</a></li>
       </ul>
       <hr/>
@@ -177,7 +177,7 @@
               </ul>
             </div>
             <div class="searchInput">
-                <input type="search" class="form-control" placeholder="Search" /><span class="inputIcon fa fa-search"></span>
+                <input type="search" class="form-control" placeholder="Search" id="mainSearch"/><span class="inputIcon fa fa-search"></span>
               </div>
             </nav>
             </div>
@@ -261,7 +261,7 @@
           <!--Card-->
           <div class="card">
             <div class="cardContent">
-              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetailsNewApp">App Test</a></div>
+              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetailsNewApp">Mashup App</a></div>
               <div class="cardSubTitle">Sub Title</div>
             </div>
             <div><img class="cardImage" src="images/placeholder-thumb.png" alt="Screenshot" data-toggle="modal" data-target="#modalDetailsNewApp"/></div>
@@ -277,7 +277,20 @@
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3">
           <!--Card-->
-          
+          <div class="card">
+            <div class="cardContent">
+              <div class="cardTitle" ><a href="#" data-toggle="modal" data-target="#modalDetailsNewApp">EPA App</a></div>
+              <div class="cardSubTitle">Sub Title</div>
+            </div>
+            <div><img class="cardImage" src="images/placeholder-thumb.png" alt="Screenshot" data-toggle="modal" data-target="#modalDetailsNewApp"/></div>
+           	<div class="cardContent">
+              <div class="cardCatagory">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis nibh porttitor, accumsan purus.</div>
+              <img class="capabilityIcons" src="images/loopbackIcon.png" data-toggle="tooltip" data-placement="top" title="Loopback" alt="Loopback"/><img class="capabilityIcons" src="images/angularjs-logo.png" data-toggle="tooltip" data-placement="top" title="AngularJS" alt="AngularJS"/><img class="capabilityIcons" src="images/nodeIcon.png" data-toggle="tooltip" data-placement="top" title="NodeJS" alt="NodeJS"/><img class="capabilityIcons" src="images/amazonIcon.png" data-toggle="tooltip" data-placement="top" title="Amazon Web Services" alt="Amazon Web Services"/>
+           	</div>
+            <div class="cardFooter">
+              <div class="cardThumb fa fa-thumbs-up"> 230</div><div class="cardEye fa fa-eye"> 2600</div><button class="cardButton" data-toggle="modal" data-target="#modalDetailsNewApp">READ MORE</button>
+            </div>
+          </div>
           <!--Card End-->
           </div>
           <div class="col-sm-6 col-md-4 col-lg-3">
@@ -386,7 +399,7 @@
  	  </div>
 	</div>
     
-    <!--Modal RefusalCheck Application Details-->
+    <!--Modal Lumify Application Details-->
     <div id="modalDetailsLumify" class="modal fade" tabindex="-1" role="dialog">
 	  <div class="modal-dialog modal-lg">
  	    <div class="modal-content">
@@ -414,6 +427,20 @@
  	  </div>
 	</div>
     
+    <!--Modal About -->
+    <div id="modalAbout" class="modal fade" tabindex="-1" role="dialog">
+	  <div class="modal-dialog modal-lg">
+ 	    <div class="modal-content">
+          <div class="row modalRow" style="padding:20px">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <div id="modalLeft" class="col-md-12">
+              About Content.
+            </div>
+  	      </div>
+        </div>
+ 	  </div>
+	</div>
+    
     <!--Modal Contact -->
     <div id="modalContact" class="modal fade" tabindex="-1" role="dialog">
 	  <div class="modal-dialog modal-lg">
@@ -421,30 +448,8 @@
           <div class="row modalRow" style="padding:20px">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <div id="modalLeft" class="col-md-12">
-              <form>
-  			    <div class="form-group">
-   				  <label for="name">Name</label>
-                  <input type="text" class="form-control" id="contactName" placeholder="Name">
-                </div>
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" id="contactEmail" placeholder="Email">
-                </div>
-                <div class="form-group">
-                  <label for="phone">Phone #</label>
-                  <input type="number" class="form-control" id="contactPhone" placeholder="Phone #">
-                </div>
-                <div class="form-group">
-                  <label for="industry">Industry</label>
-                  <input type="text" class="form-control" id="contactIndustry" placeholder="Industry">
-                </div>
-                <div class="form-group" style="margin-bottom:40px">
-                  <label for="industry">Comments</label>
-                  <textarea class="form-control" rows="3"></textarea>
-                </div>
-              </form>
+              Contact Content.
             </div>
-            <button class="modalButton" type="submit" style="left:20px;">SUBMIT</button>
   	      </div>
         </div>
  	  </div>
@@ -460,6 +465,11 @@
     
     <!-- Custom JavaScript -->
     <script>
+	<!-- Disable Search -->
+	$( "#mainSearch" ).prop( "disabled", true );
+	
+	
+	
 	<!-- Initialize tooltips -->
 	$( document ).ready(function() {
       $('[data-toggle="tooltip"]').tooltip()
@@ -526,6 +536,19 @@
 		$('#filterNav').removeData('bs.affix').removeClass('affix affix-top affix-bottom')
 		$('#filterNav').affix({ offset: distance})
     });
+	
+	<!--About-->
+	$("#aboutLinkMobile").click(function() {
+		$("#mobileNav").offcanvas('hide');
+		$('#mobileNav').on('hidden.bs.offcanvas', function (e) {
+     		$("#modalAbout").modal("show");
+		});
+	});
+	
+	$("#aboutLink").click(function() {
+		$("#modalAbout").modal("show");
+	});
+	
 	
 	
 	
