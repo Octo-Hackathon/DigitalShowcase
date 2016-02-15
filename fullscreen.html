@@ -58,7 +58,7 @@
 <!--Mobile Nav-->  
     <nav id="mobileNav" class="navmenu navmenu-default navmenu-fixed-right offcanvas" role="navigation">
       <div class="input-group" id="sideSearch">
-        <input type="text" class="form-control searchBox" placeholder="Search For..." />
+        <input id="searchInput" type="text" class="form-control searchBox" placeholder="Search For..." />
     	<i id="mobileSearchIcon" class="glyphicon glyphicon-search form-control-feedback"></i>
       </div>
 	  <ul>
@@ -467,6 +467,7 @@
     <script>
 	<!-- Disable Search -->
 	$( "#mainSearch" ).prop( "disabled", true );
+	$( "#searchInput" ).prop( "disabled", true );
 	
 	
 	
