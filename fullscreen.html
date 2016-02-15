@@ -589,10 +589,14 @@
 	
 	<!--fixes sliding nav modal interference-->
 	$("#contactLinkMobile").click(function() {
+   var showIt = true;
 		$("#mobileNav").offcanvas('hide');
 		$('#mobileNav').on('hidden.bs.offcanvas', function (e) {
+      if(showIt)
      		$("#modalContact").modal("show");
+      showIt = false;
 		});
+    
 	});
 	
 	$("#contactLink").click(function() {
@@ -608,9 +612,12 @@
 	
 	<!--About-->
 	$("#aboutLinkMobile").click(function() {
+    var showIt = true;
 		$("#mobileNav").offcanvas('hide');
 		$('#mobileNav').on('hidden.bs.offcanvas', function (e) {
-     		$("#modalAbout").modal("show");
+     	if(showIt)
+        $("#modalAbout").modal("show");
+      showIt = false;
 		});
 	});
 	
