@@ -185,7 +185,7 @@
         
         <!-- Cards -->
         <div id="applicationList" class="row">
-          <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="col-sm-6 col-md-4 col-lg-3 api/open-data microservices healthcare" id="card">
           <!--Card-->
           <div class="card">
           	<div class="cardContent">
@@ -203,7 +203,7 @@
           </div>
           <!--Card End-->
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="col-sm-6 col-md-4 col-lg-3 microservices api/open-data healthcare" id="card">
           <!--Card-->
           <div class="card">
             <div class="cardContent">
@@ -221,7 +221,7 @@
           </div>
           <!--Card End-->
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="col-sm-6 col-md-4 col-lg-3 microservices healthcare" id="card">
           <!--Card-->
           <div class="card">
             <div class="cardContent">
@@ -239,7 +239,7 @@
           </div>
           <!--Card End-->
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="col-sm-6 col-md-4 col-lg-3 big-data national-security intelligence-community" id="card">
           <!--Card-->
           <div class="card">
             <div class="cardContent">
@@ -257,7 +257,7 @@
           </div>
           <!--Card End-->
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="col-sm-6 col-md-4 col-lg-3 microservices financial-services" id="card">
           <!--Card-->
           <div class="card">
             <div class="cardContent">
@@ -275,7 +275,7 @@
           </div>
           <!--Card End-->
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="col-sm-6 col-md-4 col-lg-3 microservices api/open-data healthcare" id="card">
           <!--Card-->
           <div class="card">
             <div class="cardContent">
@@ -546,24 +546,101 @@
 	});
 	
 	<!--checkbox side menu-->
+	var checked = [];
 	$( ".menuBtn" ).click(function() {
+		var itemslength = $('div#applicationList div#card').length;
 		if ($(this).children("span").hasClass( "fa-check-square-o" )) {
           $(this).children("span").removeClass( "fa-check-square-o" );
 		  $(this).children("span").addClass( "fa-square-o" );
+		  var filval = $(this).text().toLowerCase().replace(' ','-');
+		  remove(filval);
+		  $('div#applicationList div#card').each(function(i) {
+				$(this).fadeOut('slow', function(){if(itemslength == ++i){show();}});
+		  });
 		} else {
 		  $(this).children("span").removeClass( "fa-square-o" );
 		  $(this).children("span").addClass( "fa-check-square-o" );
+		  var filterVal = $(this).text().toLowerCase().replace(' ','-');
+		  checked.push(filterVal);
+		  $('div#applicationList div#card').each(function(i) {
+					$(this).fadeOut('slow', function(){if(itemslength == ++i){show();}});
+		  });
 		}
     });
+
+    function remove(value){
+    	var index = checked.indexOf(value);
+    	if(index > -1){
+    		checked.splice(index,1);
+    	}
+    }
+
+    function show(){
+		$('div#applicationList div#card').each(function() {
+			var count = 0;
+			if(checked.length == 0){
+				$(this).fadeIn('slow');
+			}
+			else{
+				for(i = 0; i < checked.length; i++){
+					if($(this).hasClass(checked[i])){
+						count = count + 1;
+					}
+				}
+				if(count == checked.length){
+					$(this).fadeIn('slow');
+				}
+			}
+		});
+	}
+
+	var clicked = [];
 	$( ".dropBtn" ).click(function() {
+		var itemslength = $('div#applicationList div#card').length;
 		if ($(this).children("span").hasClass( "fa-check-square-o" )) {
-          $(this).children("span").removeClass( "fa-check-square-o" );
-		  $(this).children("span").addClass( "fa-square-o" );
+		    $(this).children("span").removeClass( "fa-check-square-o" );
+			$(this).children("span").addClass( "fa-square-o" );
+			var filval = $(this).text().toLowerCase().replace(' ','-');
+			rem(filval);
+			$('div#applicationList div#card').each(function(i) {
+				$(this).fadeOut('slow', function(){if(itemslength == ++i){showAll();}});
+			});
 		} else {
-		  $(this).children("span").removeClass( "fa-square-o" );
-		  $(this).children("span").addClass( "fa-check-square-o" );
+			$(this).children("span").removeClass( "fa-square-o" );
+			$(this).children("span").addClass( "fa-check-square-o" );
+			var filterVal = $(this).text().toLowerCase().replace(' ','-');
+			clicked.push(filterVal);
+			$('div#applicationList div#card').each(function(i) {
+					$(this).fadeOut('slow', function(){if(itemslength == ++i){showAll();}});
+			});
 		}
-    });
+	});
+
+	function rem(value){
+		var index = clicked.indexOf(value);
+		if(index > -1){
+			clicked.splice(index,1);
+		}				
+	}
+
+	function showAll(){
+		$('div#applicationList div#card').each(function() {
+			var count = 0;
+			if(clicked.length == 0){
+				$(this).fadeIn('slow');
+			}
+			else{
+				for(i = 0; i < clicked.length; i++){
+					if($(this).hasClass(clicked[i])){
+						count = count + 1;
+					}
+				}
+				if(count == clicked.length){
+					$(this).fadeIn('slow');
+				}
+			}
+		});
+	}
 	
 	$('.dropdown-menu').on({
     "click":function(e){
