@@ -411,6 +411,13 @@ button.close {
 	border:none;
 	outline:none;
 	padding-bottom:20px;
+	text-decoration:none !important;
+}
+.cardButton a:visited{
+	color:#F68920 !important;
+}
+.cardButton a:active{
+	color:#F68920 !important;
 }
 .cardButton:hover, .cardButton:active, cardButton:focus {
 	color:#569dd3;
