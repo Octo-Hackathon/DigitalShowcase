@@ -413,10 +413,7 @@ button.close {
 	padding-bottom:20px;
 	text-decoration:none !important;
 }
-.cardButton a:visited{
-	color:#F68920 !important;
-}
-.cardButton a:active{
+.cardButton a:visited, a:active, a:focus{
 	color:#F68920 !important;
 }
 .cardButton:hover, .cardButton:active, cardButton:focus {
